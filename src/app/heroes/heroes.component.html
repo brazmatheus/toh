@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" style="background-color:rgb(246, 224, 255)">
+      <h2>My Heroes</h2>
+
+      <ul class="heroes">
+        <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </li>
+      </ul>
+
+      
+    </div><div class="col-md-6" style="background-color:rgb(246, 224, 255)">  
+        <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+      </div>
+  </div>
+</div>
